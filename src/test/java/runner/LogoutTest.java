@@ -8,8 +8,7 @@ public class LogoutTest extends Hooks {
     ThreadLocal<Login> login = ThreadLocal.withInitial(Login::new);
 
     @Test
-    public void testRegister(){
-        login.get().RegisterTest();
-        login.get().closeSession();
+    public void testLogin() {
+        login.get().RegisterTest("tomsmith", "SuperSecretPassword!").closeSession();
     }
 }

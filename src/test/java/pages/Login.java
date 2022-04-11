@@ -19,16 +19,16 @@ public class Login extends Method {
     private WebElement clickLogout;
 
 
-    public Login RegisterTest() {
-        SEN_KEYS_INTERFACE.sendKeys(clickName, "tomsmith");
-        SEN_KEYS_INTERFACE.sendKeys(clickPassword, "SuperSecretPassword!");
+    public Login RegisterTest(String username, String password) {
+        SEN_KEYS_INTERFACE.sendKeys(clickName, username);
+        SEN_KEYS_INTERFACE.sendKeys(clickPassword, password);
         UTILS_INTERFACE.clickElement(clickLogin);
 
         WAIT_INTERFACE.pause(3);
         return this;
     }
 
-    public Login closeSession(){
+    public Login closeSession() {
         UTILS_INTERFACE.clickElement(clickLogout);
         WAIT_INTERFACE.pause(3);
         return this;

@@ -9,7 +9,7 @@ public class LoginTest extends Hooks {
     ThreadLocal<Login> login = ThreadLocal.withInitial(Login::new);
 
     @Test
-    public void testRegister(){
-        login.get().RegisterTest();
+    public void testLogin() {
+        login.get().RegisterTest("tomsmith", "SuperSecretPassword!");
     }
 }
